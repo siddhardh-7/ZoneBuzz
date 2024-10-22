@@ -5,12 +5,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Scaffold
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import com.siddhardhadarsi.zonebuzz.presentation.home.HomeScreen
-import com.siddhardhadarsi.zonebuzz.ui.theme.ZoneBuzzTheme
+import com.siddhardhadarsi.zonebuzz.core.theme.ZoneBuzzTheme
+import com.siddhardhadarsi.zonebuzz.navigation.AppNavHost
 
 class MainActivity : ComponentActivity() {
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -19,15 +15,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ZoneBuzzTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) {
-                    MyApp()
-                }
+                AppNavHost()
             }
         }
     }
-}
-
-@Composable
-fun MyApp(){
-    HomeScreen()
 }

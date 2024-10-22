@@ -2,6 +2,13 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+
+    // Hilt
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
+
+    // KSP
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -37,6 +44,9 @@ android {
     buildFeatures {
         compose = true
     }
+    ksp {
+        arg("room.schemaLocation", "$projectDir/schemas")
+    }
 }
 
 dependencies {
@@ -56,4 +66,28 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    //Hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
+
+    // Room Database
+    implementation(libs.androidx.room.runtime)
+    annotationProcessor(libs.androidx.room.compiler)
+    ksp(libs.androidx.room.compiler)                    // To use Kotlin Symbol Processing (KSP)
+    implementation(libs.androidx.room.ktx)              // Kotlin Extensions and Coroutines support for Room
+
+    // Navigation
+    implementation(libs.androidx.navigation.compose)
+
+    // LifeCycle
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)           // ViewModel
+    implementation(libs.androidx.lifecycle.viewmodel.compose)       // ViewModel utilities for Compose
+    implementation(libs.androidx.lifecycle.runtime.compose)         // Lifecycle utilities for Compose
+    implementation(libs.androidx.lifecycle.viewmodel.savedstate)    // Saved state module for ViewModel
+}
+
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
 }

@@ -1,4 +1,4 @@
-package com.siddhardhadarsi.zonebuzz.ui.theme
+package com.siddhardhadarsi.zonebuzz.core.theme
 
 import android.app.Activity
 import android.os.Build
