@@ -1,4 +1,4 @@
-package com.siddhardhadarsi.zonebuzz
+package com.siddhardhadarsi.zonebuzz.application
 
 import android.app.Application
 

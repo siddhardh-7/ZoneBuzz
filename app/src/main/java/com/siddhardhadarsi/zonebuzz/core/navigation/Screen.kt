@@ -1,4 +1,4 @@
-package com.siddhardhadarsi.zonebuzz.navigation
+package com.siddhardhadarsi.zonebuzz.core.navigation
 
 enum class Screen {
     HOME

@@ -1,4 +1,4 @@
-package com.siddhardhadarsi.zonebuzz.presentation.home
+package com.siddhardhadarsi.zonebuzz.presentation.screens.home
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
