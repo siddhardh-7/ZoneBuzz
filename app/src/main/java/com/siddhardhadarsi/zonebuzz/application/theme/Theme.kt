@@ -1,4 +1,4 @@
-package com.siddhardhadarsi.zonebuzz.core.theme
+package com.siddhardhadarsi.zonebuzz.application.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
