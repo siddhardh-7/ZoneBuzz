@@ -21,7 +21,6 @@ val PlayfairDisplay = FontFamily(
     Font(R.font.playfair_display_bold, FontWeight.Bold)
 )
 
-// Combine custom fonts into Material 3 Typography
 val ZoneBuzzTypography = Typography(
     displayLarge = TextStyle(
         fontFamily = PlayfairDisplay,
